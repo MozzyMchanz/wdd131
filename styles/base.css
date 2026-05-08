@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg: #eaf2f8;
+  --surface: #163a5d;
+  --surface-2: #2978b5;
+  --panel: #ffffff;
+  --text: #122136;
+  --muted: #5f7390;
+  --border: #d8e3ec;
+  --shadow: 0 24px 55px rgba(19, 47, 83, 0.12);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(180deg, #e9f1f8 0%, #f7fafd 100%);
+  color: var(--text);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--surface);
+  text-decoration: none;
+}
+
+a:hover,
+button:hover,
+a:focus-visible {
+  color: var(--surface-2);
+}
+
+header {
+  background: var(--surface);
+  color: #fff;
+  padding: 1.25rem 1rem 0.75rem;
+  box-shadow: 0 12px 30px rgba(10, 34, 60, 0.18);
+}
+
+#course-title {
+  display: block;
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  margin-bottom: 1rem;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+nav a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.15rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  font-weight: 600;
+  transition: transform 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+nav a:hover,
+nav a:focus-visible {
+  background: #fff;
+  color: var(--surface);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 30px rgba(15, 40, 80, 0.15);
+}
+
+main {
+  max-width: 1080px;
+  margin: 2rem auto 0;
+  padding: 0 1rem 2rem;
+}
+
+.page-heading {
+  font-family: 'Libre Baskerville', serif;
+  font-size: clamp(2.75rem, 5vw, 4.5rem);
+  text-align: center;
+  margin: 0 0 1.75rem;
+  color: var(--surface);
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 1.75rem;
+  box-shadow: var(--shadow);
+}
+
+.card h2 {
+  font-family: 'Libre Baskerville', serif;
+  font-size: 1.9rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--surface);
+}
+
+.about-card p,
+.about-copy p,
+.resources-card li {
+  margin: 0 0 1rem;
+}
+
+.about-top {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.about-top p {
+  margin: 0;
+}
+
+.profile-photo {
+  width: 170px;
+  border-radius: 18px;
+  object-fit: cover;
+  box-shadow: 0 16px 32px rgba(19, 47, 83, 0.16);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 1.25rem;
+  align-items: start;
+  margin-top: 1.5rem;
+}
+
+.about-copy h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.2rem;
+  color: var(--surface-2);
+}
+
+.flag-card {
+  background: #f6fbff;
+  border: 1px solid #dbe8f4;
+  border-radius: 18px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.flag-card img {
+  border-radius: 14px;
+}
+
+.flag-card figcaption {
+  margin-top: 0.85rem;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.resources-card ul {
+  padding-left: 1.25rem;
+  margin: 0;
+}
+
+.resources-card li {
+  margin-bottom: 0.85rem;
+}
+
+.resources-card a {
+  display: inline-block;
+  transition: color 0.25s ease;
+}
+
+.resources-card a:hover,
+.resources-card a:focus-visible {
+  color: var(--surface-2);
+}
+
+footer {
+  margin: 0 auto 2rem;
+  padding: 1rem 1rem 0;
+  max-width: 1080px;
+  text-align: center;
+  color: var(--muted);
+}
+
+footer p {
+  margin: 0.35rem 0;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 950px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 620px) {
+  header {
+    padding: 1rem 0.75rem 0.6rem;
+  }
+
+  .page-heading {
+    font-size: 2.8rem;
+  }
+
+  nav ul {
+    gap: 0.55rem;
+  }
+
+  nav a {
+    padding: 0.65rem 0.9rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}

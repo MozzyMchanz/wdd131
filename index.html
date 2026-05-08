@@ -1,37 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta viewport="width=device-width, initial-scale=1.0">
-   <title>WDD 131 – Dynamic Web Fundamentals – BWIRE MOSES".
-</title>
-    <meta description="I am BWIRE MOSES a software developer. This page is about WDD 131 – Dynamic Web Fundamentals, which is knowlegde about building,designing and deploying professional websites."
-    <meta author="BWIRE MOSES"
-    >
-    <title>Mozzy's Personal Website</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Personal profile page for WDD 131 Dynamic Web Fundamentals by BWIRE MOSES.">
+  <meta name="author" content="BWIRE MOSES">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <script defer src="scripts/getdates.js"></script>
+  <title>WDD 131 Dynamic Web Fundamentals | BWIRE MOSES</title>
 </head>
 <body>
-    <header >
-        <span id="course-title" WDD 131 – Dynamic Web Fundamentals</span>
-        <nav>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/bwiremoses">LinkedIn</a></li>
-                <li><a href="https://byupw.instructure.com/bwiremoses">Canvas</a></li>
-                <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Scripture</a></li>
-                <li><a href="#contact">Final Project</a></li>
-            </ul>
+  <header>
+    <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
+    <nav>
+      <ul>
+        <li><a href="https://www.linkedin.com/in/bwiremoses">LinkedIn</a></li>
+        <li><a href="https://byupw.instructure.com/bwiremoses">I-Learn</a></li>
+        <li><a href="https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/3?lang=eng&id=p7#p7">Scripture</a></li>
+        <li><a href="#final-project">Final Project</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    </header>
-    <main>
-        <h1>BWIRE MOSES</h1>
-        <section class="card">
-<h1>About Me</h1>
-<img src="https://www.churchofjesuschrist.org/bc/content/shared/content/images/gospel-library/portraits/bwire-moses.jpg" alt="BWIRE MOSES" >
-<p>My name is BWIRE MOSES, and I am a software developer. I have a passion for creating innovative solutions and building user-friendly applications. With a strong background in programming and problem-solving, I am dedicated to delivering high-quality software that meets the needs of users.</p>
-       
+  <main>
+    <h1 class="page-heading">BWIRE MOSES</h1>
 
+    <div class="card-grid">
+      <section class="card about-card">
+        <h2>About Me</h2>
+        <div class="about-top">
+          <p>My name is BWIRE MOSES and I am a software developer. I am passionate about building clean, modern websites and using thoughtful design to create memorable digital experiences.</p>
+          <img class="profile-photo" src="images/profile.jpg" alt="Profile portrait of BWIRE MOSES">
+        </div>
 
-</section>
-        <section class="card"></section>
-    </main>
-    <footer></footer>
+        <div class="about-grid">
+          <div class="about-copy">
+            <h3>Kampala, Uganda</h3>
+            <p>I am currently based in Kampala, Uganda, where I continue to learn new technologies and contribute to meaningful projects. I enjoy collaborating with others and creating accessible digital solutions.</p>
+          </div>
+
+          <figure class="flag-card">
+            <img src="images/uganda.png" alt="Official flag of Uganda">
+            <figcaption>Official Flag of Uganda</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <aside class="card resources-card" id="final-project">
+        <h2>Web Dev Resources</h2>
+        <ul>
+          <li><a href="https://dev.to/">Dev.to Community</a></li>
+          <li><a href="https://www.smashingmagazine.com/">Smashing Magazine</a></li>
+          <li><a href="https://css-tricks.com/">CSS Tricks</a></li>
+          <li><a href="https://www.w3schools.com/">W3 Schools</a></li>
+          <li><a href="https://www.udemy.com/">Udemy</a></li>
+          <li><a href="https://picsum.photos/">Lorem Picsum Image Placeholder</a></li>
+        </ul>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <p id="copyright"></p>
+    <p id="lastModified"></p>
+  </footer>
+</body>
+</html>

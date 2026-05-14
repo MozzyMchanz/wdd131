@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japan - A Land of Tradition and Innovation</title>
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Japan</h1>
+        <p>A Land of Tradition and Innovation</p>
+    </header>
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/japan-hero-small.webp" media="(max-width: 500px)">
+                <source srcset="images/japan-hero-medium.webp" media="(max-width: 1000px)">
+                <img src="images/japan-hero-large.webp" alt="Scenic view of Mount Fuji in Japan" width="800" height="400">
+            </picture>
+        </section>
+        <section class="weather">
+            <h2>Weather</h2>
+            <div class="weather-info">
+                <p>Temperature: 15°C</p>
+                <p>Wind Speed: 10 km/h</p>
+                <p>Wind Chill: <span id="wind-chill">N/A</span></p>
+            </div>
+        </section>
+        <section class="info">
+            <h2>About Japan</h2>
+            <p>Japan is an island nation in East Asia, known for its rich culture, advanced technology, and stunning natural beauty.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span> | Last Modified: <span id="last-modified"></span></p>
+    </footer>
+</body>
+</html>

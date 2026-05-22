@@ -1,0 +1,153 @@
+/* Filtered Temples CSS - Mobile First */
+
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --text-color: #333;
+  --bg-color: #f4f4f4;
+  --white: #fff;
+  --shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#hamburger {
+  display: block;
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+#nav-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--primary-color);
+  flex-direction: column;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-shadow: var(--shadow);
+}
+
+#nav-menu.open {
+  display: flex;
+}
+
+#nav-menu li {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+#nav-menu li:last-child {
+  border-bottom: none;
+}
+
+#nav-menu a {
+  display: block;
+  padding: 1rem;
+  color: var(--white);
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+#nav-menu a:hover {
+  background-color: var(--secondary-color);
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+main h1 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+figure {
+  margin: 0;
+  background-color: var(--white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+}
+
+figcaption {
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.5rem 0;
+}
+
+.temple-details {
+  padding: 0.75rem 1rem 1.25rem;
+  text-align: left;
+}
+
+.temple-details p {
+  margin: 0.25rem 0;
+}
+
+.temple-details strong {
+  color: var(--primary-color);
+}
+

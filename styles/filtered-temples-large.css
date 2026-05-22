@@ -1,0 +1,48 @@
+/* Filtered Temples Large CSS - Larger Views */
+
+@media screen and (min-width: 768px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  header h1 {
+    margin: 0;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  #nav-menu {
+    display: flex !important;
+    position: static;
+    background: none;
+    box-shadow: none;
+    flex-direction: row;
+  }
+
+  #nav-menu li {
+    border-bottom: none;
+  }
+
+  #nav-menu a {
+    padding: 0.5rem 1rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  footer {
+    padding: 2rem;
+  }
+}
+

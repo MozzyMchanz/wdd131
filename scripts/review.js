@@ -1,11 +1,3 @@
-const reviewProducts = [
-  { id: 'athena-thermostat', name: 'Athena Smart Thermostat' },
-  { id: 'zephyr-air-purifier', name: 'Zephyr Air Purifier' },
-  { id: 'solis-water-heater', name: 'Solis Water Heater' },
-  { id: 'nova-light-system', name: 'Nova Light System' },
-  { id: 'orion-security-kit', name: 'Orion Security Kit' }
-];
-
 document.addEventListener('DOMContentLoaded', () => {
   const params = new URLSearchParams(window.location.search);
   const productId = params.get('productName');
@@ -24,34 +16,47 @@ document.addEventListener('DOMContentLoaded', () => {
   const confirmationMessage = document.getElementById('confirmationMessage');
   const reviewCountText = document.getElementById('reviewCountText');
 
-  const isSubmitted = productId && ratingValue && installationDate;
+  const ratingNumber = Number(ratingValue);
+  const ratingValid = Number.isInteger(ratingNumber) && ratingNumber >= 1 && ratingNumber <= 5;
+  const isSubmitted = Boolean(productId && ratingValid && installationDate);
+
+  const productCatalog = window.productCatalog ?? [];
+  const matchedProduct = productCatalog.find(item => item.id === productId);
 
   if (!isSubmitted) {
     confirmationMessage.textContent = 'No review data was submitted. Please return to the form and submit your review.';
-    productDisplay.textContent = 'N/A';
-    ratingDisplay.textContent = 'N/A';
-    dateDisplay.textContent = 'N/A';
-    reviewTextDisplay.textContent = 'No review submitted.';
-    userNameDisplay.textContent = 'Anonymous';
-    featuresDisplay.innerHTML = '<li>No features selected.</li>';
+  }
+
+  productDisplay.textContent = matchedProduct ? matchedProduct.name : (productId || 'N/A');
+  ratingDisplay.textContent = ratingValid
+    ? '★'.repeat(ratingNumber) + '☆'.repeat(5 - ratingNumber)
+    : 'N/A';
+  dateDisplay.textContent = installationDate || 'N/A';
+  reviewTextDisplay.textContent = reviewText ? reviewText : 'No written review provided.';
+  userNameDisplay.textContent = userName ? userName : 'Anonymous';
+
+  while (featuresDisplay.firstChild) {
+    featuresDisplay.removeChild(featuresDisplay.firstChild);
+  }
+
+  if (features.length) {
+    features.forEach(feature => {
+      const listItem = document.createElement('li');
+      listItem.textContent = feature;
+      featuresDisplay.appendChild(listItem);
+    });
   } else {
-    const matchedProduct = reviewProducts.find(item => item.id === productId);
-    productDisplay.textContent = matchedProduct ? matchedProduct.name : productId;
-    ratingDisplay.textContent = '★'.repeat(Number(ratingValue)) + '☆'.repeat(5 - Number(ratingValue));
-    dateDisplay.textContent = installationDate;
-    reviewTextDisplay.textContent = reviewText ? reviewText : 'No written review provided.';
-    userNameDisplay.textContent = userName ? userName : 'Anonymous';
-    featuresDisplay.innerHTML = features.length
-      ? features.map(feature => `<li>${feature}</li>`).join('')
-      : '<li>No features selected.</li>';
+    const listItem = document.createElement('li');
+    listItem.textContent = 'No features selected.';
+    featuresDisplay.appendChild(listItem);
+  }
 
-    const storedCount = Number(localStorage.getItem('reviewCount') || '0');
-    const updatedCount = storedCount + 1;
+  const storedCount = Number(localStorage.getItem('reviewCount') || '0');
+  const updatedCount = isSubmitted ? storedCount + 1 : storedCount;
+
+  if (isSubmitted) {
     localStorage.setItem('reviewCount', String(updatedCount));
-    reviewCountText.textContent = String(updatedCount);
   }
 
-  if (!isSubmitted) {
-    reviewCountText.textContent = String(Number(localStorage.getItem('reviewCount') || '0'));
-  }
+  reviewCountText.textContent = String(updatedCount);
 });

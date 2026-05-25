@@ -97,13 +97,13 @@ function formatCard(temple) {
   img.loading = 'lazy';
   img.decoding = 'async';
 
-  // If an image URL fails to load, avoid breaking the layout
+  // If an image URL fails to load, use a local fallback image
   img.addEventListener('error', () => {
     console.warn('Temple image failed to load:', temple.name, temple.imageUrl);
-    // Keep layout stable: keep the broken image element but hide it
-    img.removeAttribute('src');
     img.alt = `${imgAlt} (Image unavailable)`;
-    img.style.display = 'none';
+    // Use bundled local image as a fallback so the gallery remains visually intact
+    img.src = 'images/temple.jpg';
+    img.style.display = '';
   });
 
 

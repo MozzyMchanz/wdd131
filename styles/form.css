@@ -9,10 +9,11 @@
 }
 
 main {
+  /* Keep same selector but only define values that are not duplicated in base.css.
+     This reduces the chance of repeated-rules audit failures. */
   max-width: 900px;
-  margin: 2rem auto 1rem;
-  padding: 0 1rem;
 }
+
 
 .form-intro {
   margin-bottom: 1.5rem;

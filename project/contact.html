@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact NileTech Solutions</title>
+  <meta name="description" content="Contact NileTech Solutions for digital solutions, IT support, and technology consulting in Uganda.">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="page">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">NT</span>
+        <span class="brand-name"><strong>NileTech Solutions</strong><span>Uganda Digital Services</span></span>
+      </a>
+      <nav class="nav-primary" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">Get in touch</span>
+        <h1>Start your digital transformation with NileTech.</h1>
+        <p>Send us the details of your project, and we’ll respond with the best technology solution for your organization.</p>
+      </div>
+      <div class="hero-visual">
+        <img src="images/hero-illustration.svg" alt="Phone and email contact illustration" loading="lazy">
+      </div>
+    </section>
+
+    <section class="section panel">
+      <div class="section-title">
+        <h2>Contact form</h2>
+      </div>
+      <p id="contact-draft-note" class="note"></p>
+      <form id="contact-form" novalidate>
+        <div class="input-group">
+          <label for="name">Full name</label>
+          <input id="name" name="name" type="text" required placeholder="Your full name">
+        </div>
+        <div class="input-group">
+          <label for="email">Email address</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+        </div>
+        <div class="input-group">
+          <label for="organization">Organization</label>
+          <input id="organization" name="organization" type="text" placeholder="School, business, or department">
+        </div>
+        <div class="input-group">
+          <label for="service">Service interest</label>
+          <select id="service" name="service">
+            <option value="">Select a service</option>
+            <option value="software">Custom software</option>
+            <option value="website">Website design</option>
+            <option value="mobile">Mobile app</option>
+            <option value="cloud">Cloud solutions</option>
+            <option value="security">Cybersecurity</option>
+          </select>
+        </div>
+        <div class="input-group">
+          <label for="message">Project description</label>
+          <textarea id="message" name="message" required placeholder="Tell us about your project and goals"></textarea>
+        </div>
+        <button class="button button-primary" type="submit">Send message</button>
+        <p id="contact-confirmation" class="note" style="display:none; margin-top:14px;"></p>
+      </form>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h2>Office location</h2>
+      </div>
+      <p class="section-intro">NileTech Solutions is based in Kampala and supports clients throughout Uganda with remote and on-site services.</p>
+      <div class="panel">
+        <p><strong>Email:</strong> info@niletech.ug</p>
+        <p><strong>Phone:</strong> +256 700 000 000</p>
+        <p><strong>Address:</strong> 24 Tech Valley Road, Kampala, Uganda</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page">
+    <p>© 2026 NileTech Solutions. Contact form saves draft content automatically in your browser.</p>
+  </footer>
+
+  <script src="scripts.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 480" role="img" aria-labelledby="heroTitle">
+  <title id="heroTitle">Illustration of a digital team working on technology solutions</title>
+  <rect width="640" height="480" rx="40" fill="#f5f8ff"/>
+  <circle cx="160" cy="150" r="60" fill="#0b3d91" opacity="0.14"/>
+  <path d="M195 310c0 44-36 80-80 80s-80-36-80-80 36-80 80-80 80 36 80 80Z" fill="#f2a900" opacity="0.18"/>
+  <rect x="320" y="80" width="240" height="250" rx="28" fill="#fff" stroke="#d7e0f4" stroke-width="14"/>
+  <path d="M340 118h200" stroke="#0b3d91" stroke-width="12" stroke-linecap="round"/>
+  <circle cx="380" cy="160" r="18" fill="#f2a900"/>
+  <rect x="340" y="200" width="180" height="22" rx="11" fill="#eaf0ff"/>
+  <rect x="340" y="240" width="140" height="22" rx="11" fill="#eaf0ff"/>
+  <rect x="340" y="280" width="110" height="22" rx="11" fill="#eaf0ff"/>
+  <path d="M207 290c20-18 60-22 82 0 22 22 28 48 28 48H119s6-28 28-48Z" fill="#0b3d91" opacity="0.1"/>
+  <ellipse cx="295" cy="350" rx="110" ry="28" fill="#eaf0ff"/>
+  <circle cx="428" cy="148" r="42" fill="#0b3d91" opacity="0.2"/>
+  <path d="M525 300c0 10-8 18-18 18H379c-10 0-18-8-18-18V238c0-10 8-18 18-18h128c10 0 18 8 18 18v62Z" fill="#0b3d91" opacity="0.08"/>
+  <path d="M460 270h50" stroke="#0b3d91" stroke-width="10" stroke-linecap="round"/>
+</svg>

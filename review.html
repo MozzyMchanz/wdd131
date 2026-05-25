@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Submitted | WDD 131</title>
+  <meta name="description" content="Confirmation page showing submitted product review details and a review counter.">
+  <meta name="author" content="BWIRE MOSES">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/form.css">
+  <script defer src="scripts/review.js"></script>
+  <script defer src="scripts/getdates.js"></script>
+</head>
+<body>
+  <header>
+    <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
+    <nav>
+      <ul>
+        <li><a href="form.html">Review Form</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="temples.html">Temples</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="page-heading">Review Submitted</h1>
+
+    <section class="confirmation-card">
+      <p id="confirmationMessage">Thank you for submitting your review.</p>
+      <div class="summary-grid">
+        <div class="summary-item">
+          <h2>Product</h2>
+          <p id="productDisplay">—</p>
+        </div>
+        <div class="summary-item">
+          <h2>Rating</h2>
+          <p id="ratingDisplay">—</p>
+        </div>
+        <div class="summary-item">
+          <h2>Installed</h2>
+          <p id="dateDisplay">—</p>
+        </div>
+        <div class="summary-item full-width">
+          <h2>Useful Features</h2>
+          <ul id="featuresDisplay"></ul>
+        </div>
+        <div class="summary-item full-width">
+          <h2>Review</h2>
+          <p id="reviewTextDisplay">No written review provided.</p>
+        </div>
+        <div class="summary-item full-width">
+          <h2>Reviewer</h2>
+          <p id="userNameDisplay">Anonymous</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="counter-panel">
+      <p><strong id="reviewCountText">0</strong> product reviews completed.</p>
+      <a class="button-link" href="form.html">Submit another review</a>
+    </section>
+  </main>
+
+  <footer>
+    <p><span id="copyright"></span></p>
+    <p><span id="lastModified"></span></p>
+  </footer>
+</body>
+</html>

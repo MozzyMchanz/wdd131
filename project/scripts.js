@@ -126,12 +126,23 @@ function renderTestimonials() {
     .join('');
 }
 
+function normalizePath(pathname) {
+  if (!pathname) return '';
+  const last = pathname.split('/').pop();
+  if (last === '' || last === undefined) return 'index.html';
+  return last;
+}
+
 function highlightNav() {
-  const path = window.location.pathname.split('/').pop();
+  const current = normalizePath(window.location.pathname);
   const links = document.querySelectorAll('nav a');
+
   links.forEach((link) => {
-    if (link.getAttribute('href') === path || (link.getAttribute('href') === 'index.html' && path === '')) {
+    const href = link.getAttribute('href');
+    if (href === current) {
       link.classList.add('active');
+    } else {
+      link.classList.remove('active');
     }
   });
 }

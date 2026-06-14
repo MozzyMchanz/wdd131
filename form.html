@@ -42,35 +42,43 @@
           <select id="productName" name="productName" required>
             <option value="" disabled selected>Select a Product ...</option>
           </select>
+
         </div>
+
 
         <fieldset class="field-group rating-group">
           <legend>Overall Rating <span class="required-marker">*</span></legend>
-          <p class="rating-hint">All rating buttons use the same name so only one rating can be selected.</p>
+          <p class="rating-hint" id="ratingHint">All rating buttons use the same name so only one rating can be selected.</p>
           <div class="rating-options">
+
             <label class="rating-label" for="rating1">
-              <input type="radio" id="rating1" name="rating" value="1" required>
+              <input type="radio" id="rating1" name="rating" value="1" required aria-describedby="ratingHint">
               <span class="star" aria-hidden="true">☆</span>
               <span class="sr-only">1 star</span>
             </label>
+
             <label class="rating-label" for="rating2">
-              <input type="radio" id="rating2" name="rating" value="2" required>
+              <input type="radio" id="rating2" name="rating" value="2" required aria-describedby="ratingHint">
               <span class="star" aria-hidden="true">☆</span>
+
               <span class="sr-only">2 stars</span>
             </label>
             <label class="rating-label" for="rating3">
-              <input type="radio" id="rating3" name="rating" value="3" required>
+              <input type="radio" id="rating3" name="rating" value="3" required aria-describedby="ratingHint">
               <span class="star" aria-hidden="true">☆</span>
+
               <span class="sr-only">3 stars</span>
             </label>
             <label class="rating-label" for="rating4">
-              <input type="radio" id="rating4" name="rating" value="4" required>
+              <input type="radio" id="rating4" name="rating" value="4" required aria-describedby="ratingHint">
               <span class="star" aria-hidden="true">☆</span>
+
               <span class="sr-only">4 stars</span>
             </label>
             <label class="rating-label" for="rating5">
-              <input type="radio" id="rating5" name="rating" value="5" required>
+              <input type="radio" id="rating5" name="rating" value="5" required aria-describedby="ratingHint">
               <span class="star" aria-hidden="true">☆</span>
+
               <span class="sr-only">5 stars</span>
             </label>
           </div>
@@ -79,7 +87,11 @@
         <div class="field-group">
           <label for="installationDate">Date of Installation <span class="required-marker">*</span></label>
           <input type="date" id="installationDate" name="installationDate" required>
+
+
         </div>
+
+
 
         <fieldset class="field-group checkbox-group">
           <legend>Useful Features</legend>
@@ -99,15 +111,19 @@
           <textarea id="reviewText" name="reviewText" rows="5" placeholder="Write your review here..."></textarea>
         </div>
 
+
         <div class="field-group">
           <label for="userName">Your Name</label>
-          <input type="text" id="userName" name="userName" placeholder="Optional">
+          <input type="text" id="userName" name="userName" placeholder="Optional" autocomplete="name">
         </div>
+
+
       </div>
 
       <div class="form-actions">
         <input type="submit" value="Submit Review">
       </div>
+
     </form>
   </main>
 

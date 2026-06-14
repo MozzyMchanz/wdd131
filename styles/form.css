@@ -122,7 +122,7 @@ textarea {
 
 .rating-label .star {
   font-size: 1.6rem;
-  color: #8b9bb6;
+  color: #6f7faa;
 }
 
 .rating-label input:checked + .star,
@@ -133,8 +133,10 @@ textarea {
 .rating-hint {
   margin: 0;
   font-size: 0.95rem;
-  color: #57627e;
+  color: #3f4c6b;
 }
+
+
 
 .checkbox-grid {
   display: grid;
